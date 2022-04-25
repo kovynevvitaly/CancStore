@@ -7,5 +7,6 @@ namespace CancStore.Models {
         [DataType("decimal(8, 2)")]  
         public decimal Price { get; set; }
         public string Category { get; set; }
+        public long StoredAmount { get; set; }
     }
 }
