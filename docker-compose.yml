@@ -11,7 +11,7 @@ services:
     networks:
       - canc-store-net
     volumes:
-      - canc-store-db:/var/lib/postgres/data
+      - canc-store-db:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     restart: always
