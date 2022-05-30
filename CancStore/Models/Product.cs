@@ -1,12 +1,9 @@
-using System.ComponentModel.DataAnnotations;
+﻿namespace CancStore.Models; 
 
-namespace CancStore.Models {
-    public class Product {
-        public long Id { get; set; }
-        public string? Name { get; set; }
-        [DataType("decimal(8, 2)")]  
-        public decimal Price { get; set; }
-        public string? Category { get; set; }
-        public long StoredAmount { get; set; }
-    }
+public class Product {
+    public int Id { get; set; }
+    public string Name { get; set; } = "";
+    public string? Description { get; set; }
+
+    public List<ProductMaterial> ProductMaterials { get; set; } = new();
 }

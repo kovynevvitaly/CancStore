@@ -17,7 +17,6 @@ try {
     builder.Services.AddSwaggerGen();
     builder.Services.AddDbContext<StoreDbContext>(optionsBuilder => 
         optionsBuilder.UseNpgsql(builder.Configuration.GetConnectionString("CancStoreDbConnection")));
-    builder.Services.AddScoped<IRepository, StoreRepository>();
     builder.Logging.ClearProviders();
     builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
     builder.Host.UseNLog();
